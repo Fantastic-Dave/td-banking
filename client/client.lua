@@ -444,13 +444,14 @@ end)
 RegisterCommand('şifrem',function(data,source)
 	local sifre = data
 	ESX.TriggerServerCallback('td-banking:fetchPassword', function(data)
-		TriggerEvent('notification', 'Kredi Kartı Şifren: '..data..'')
+		exports['mythic_notify']:SendAlert('inform', 'Kredi Kartı Şifren: '..data..'')
+		--TriggerEvent('notification', 'Kredi Kartı Şifren: '..data..'')
 	end)
 end)
 		
 RegisterCommand('krediknum',function(data,source)
 	local sifre = data
 	ESX.TriggerServerCallback('td-banking:checknumber', function(data)
-		TriggerEvent('notification', 'Kredi Kartı Numaran: '..data..'')
+		exports['mythic_notify']:SendAlert('inform', 'Kredi Kartı Numaran: '..data..'')
 	end)
 end)
