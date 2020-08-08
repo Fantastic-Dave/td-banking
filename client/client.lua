@@ -103,7 +103,7 @@ end
 RegisterCommand("atm", function()
 	print("komut")
 	if nearBank() or nearATM() then
-		ESX.TriggerServerCallback("hasan:itemkontrol", function(var)
+		ESX.TriggerServerCallback("td-banking:creditcontrol", function(var)
 			if var then
         print("yakinda")
         ESX.UI.Menu.CloseAll()
